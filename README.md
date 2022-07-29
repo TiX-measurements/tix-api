@@ -15,4 +15,4 @@ You will need to have an IpToAs instance created (since the function will fetch 
 
 If you have some problems downloading files, just download them manually.
 
-When the server is initialized it will create an admin user. Set the environment variables `TIX_API_USER` and `TIX_API_PASSWORD` to define the credentials.
+When the server is initialized for the first time, it will create an admin user. Set the environment variables `TIX_API_USER` and `TIX_API_PASSWORD` to define the credentials.
