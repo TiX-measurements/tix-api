@@ -83,7 +83,7 @@ app.post('/api/register', function(req, res) {
     }
     sa.post('https://www.google.com/recaptcha/api/siteverify')
         .send({
-            secret: '6LexqSAUAAAAAGP3Nw4RnKwYn_KQc7BH-jmFksjN',
+            secret: process.env.RECAPTCHA_SECRET_KEY,
             response: user.captcharesponse,
             remoteip: req.connection.remoteAddress
         })
@@ -289,7 +289,10 @@ app.post('/api/user/:id/installation/:installationId/reports', function(req, res
         };
 
         PythonShell.run('info.py', options, function(err, result) {
-            if (err) res.status(500).send('Could not calculate ipToAs');
+            if (err) {
+                res.status(500).send(`Could not calculate ipToAs: ${err}`);
+                return;
+            }
 
             const as = result[0].split(',')[0];
             ipToAsMap[report.ip] = {};

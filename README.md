@@ -16,3 +16,5 @@ You will need to have an IpToAs instance created (since the function will fetch 
 If you have some problems downloading files, just download them manually.
 
 When the server is initialized for the first time, it will create an admin user. Set the environment variables `TIX_API_USER` and `TIX_API_PASSWORD` to define the credentials.
+
+You'll also need to set the [Google ReCaptcha](https://developers.google.com/recaptcha/docs/display) secret key with the environment variable `RECAPTCHA_SECRET_KEY`. Note that if you change this key you'll also have to update the `site-key` in the [tix-web](https://developers.google.com/recaptcha/docs/display).
