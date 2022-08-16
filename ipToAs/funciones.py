@@ -9,7 +9,7 @@ from unicodedata import normalize
 # funciones para base de datos #
 ################################
 def conectardb():
-    db_host = 'tix-api'
+    db_host = 'mysql'
     usuario = 'tix'
     clave = 'tix'
     base_de_datos = 'iptoas'
