@@ -139,11 +139,13 @@ def pais_num_name_nic(ip_dire, idioma):
     if idioma == 'EN' or idioma == 'ES':
         idioma = 'lang' + idioma
         if ip_dire != 'UNKNOWN':
-            pais = pais_cliente(ip_dire)
+            #pais = pais_cliente(ip_dire)
+            pais = 'UNKNOWN'
             num_as = as_num_cliente(ip_dire)
         if num_as != 'UNKNOWN':
             nameas = nombre_as(num_as)
-            nic = nic_as(num_as)
+            #nic = nic_as(num_as)
+            nic = 'UNKNOWN'
         if pais != 'UNKNOWN':
             namepais = 'AR';
     else:
