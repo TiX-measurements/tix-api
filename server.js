@@ -291,6 +291,7 @@ app.post('/api/user/:id/installation/:installationId/reports', function(req, res
         PythonShell.run('info.py', options, function(err, result) {
             if (err) {
                 res.status(500).send(`Could not calculate ipToAs: ${err}`);
+                console.log(err);
                 return;
             }
 
